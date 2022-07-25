@@ -143,9 +143,20 @@ body {
 
         padding-top: 200px;
         padding-bottom: 200px;
+        margin-right: auto;
+        margin-left: auto;
+        height: 600px;
+        max-width: 1600px;
+
+        background-image: linear-gradient(
+             to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+              url(../images/hero-fon.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         
     }
-
+    .hero-back {    }
 
         .hero-title {
             width: 696px;
