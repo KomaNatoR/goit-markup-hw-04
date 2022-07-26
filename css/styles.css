@@ -481,26 +481,25 @@ body {
         background-color: var(--main-sections-color);
         border: 1px solid #EEEEEE;
     }
+        .port-card-div {
+            padding: 20px 24px;
+        }
+        .port-list-title {
+            
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 2;
+            letter-spacing: 0.06em;
 
-    .port-card-div {
-        padding: 20px 24px;
-    }
-    .port-list-title {
-        
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 2;
-        letter-spacing: 0.06em;
+            color: var(--title-text-color);
+        }
+        .port-list-p {
+            margin-top: 4px;
 
-        color: var(--title-text-color);
-    }
-    .port-list-p {
-        margin-top: 4px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.87;
+            letter-spacing: 0.03em;
 
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.87;
-        letter-spacing: 0.03em;
-
-        color: var(--main-text-color);
-    }
+            color: var(--main-text-color);
+        }
