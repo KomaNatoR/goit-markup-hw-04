@@ -32,18 +32,18 @@ body {
     ul, ol {margin: 0; padding: 0;}
     p, h1, h2, h3, h4, h5, h6 {margin: 0;}    
 
-.hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    }
+        .hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+            }
 
         .container {
             width: 1200px;
@@ -129,19 +129,13 @@ body {
         line-height: 1.14;
 
         color: var(--main-text-color);
+        display: flex;
+        align-items: center;
     }
-    .contacts::before {
-        content: "";
-        display: block;
+    .contacts-icon {
+        margin-right: 10px;
+        fill: currentColor;
     }
-    .contacts[href^="mailto"]::before {
-        width: 16px;
-        height: 12px;
-        background-image: url(../images/envelope.svg);}
-    .contacts[href^="tel"]::before {
-        width: 10px;
-        height: 16px;
-        background-image: url(../images/smartphone.svg);}
         
         .contacts:hover, 
         .contacts:focus {
@@ -161,15 +155,13 @@ body {
         height: 600px;
         /* max-width: 1600px; */
 
-        background-image: linear-gradient(
-            to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/hero-fon.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        
+        }
+    .hero-back { background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero-fon.jpg);
     }
-    .hero-back {    }
 
         .hero-title {
             width: 696px;
@@ -331,7 +323,7 @@ body {
             .team-soc-list {
                 display: flex;
                 justify-content: center;
-                column-gap: 10px;
+                gap: 10px;
             }
             .team-soc-item {}
             .team-soc-link {
@@ -371,7 +363,7 @@ body {
         gap: 30px;
         
     }
-        .clients-list-item { }
+        .clients-list-item {}
         .clients-list-link {
             display: flex;
             justify-content: center;
@@ -400,6 +392,11 @@ body {
 
     background-color: var(--foothero-back-color);
 }
+.footer .container {
+    display: flex;
+    align-items: baseline;
+
+}
 
     .address {
         margin-top: 20px;
@@ -417,15 +414,40 @@ body {
 
         color: rgb(255,255,255,60%);}
         .contacts-down:hover, .contacts-down:focus {color: var(--accent-color);}
-    .footer-soc-list {}
+    
+    .footer-container-soc {margin-left: 70px;}
+    .footer-soc-title {
+        margin-bottom: 20px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+
+    .footer-soc-list {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
     .footer-soc-item {}
     .footer-soc-link {
-        background-color: #fff;
-        display: block;
         width: 44px;
         height: 44px;
+        border-radius: 50%;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: #FFFFFF;
+        background-color: rgb(255,255,255,10%);
     }
+    .footer-soc-icon {fill: currentColor;}
+        .footer-soc-link:hover, .footer-soc-link:focus {background-color: var(--accent-color);}
 
 /* ============================================================= */
 /* ========================= ПОРТФОЛІО ========================= */
@@ -480,6 +502,9 @@ body {
 
         background-color: var(--main-sections-color);
         border: 1px solid #EEEEEE;
+    }
+    .select-list-item:hover, .select-list-item:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
         .port-card-div {
             padding: 20px 24px;
